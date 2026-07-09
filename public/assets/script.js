@@ -1,32 +1,23 @@
 (function () {
   var cfg = window.GNT_CONFIG || {};
+  var msgs = cfg.messages || {};
 
-  // Links de WhatsApp (todos os elementos .js-whatsapp)
-  document.querySelectorAll(".js-whatsapp").forEach(function (el) {
-    el.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      var msg = cfg.whatsappMessage || "";
-      var plan = el.getAttribute("data-plan");
-      if (plan) msg = "Olá! Quero assinar o plano " + plan + " da GNT Internet.";
-      var url = "https://wa.me/" + (cfg.whatsapp || "") + "?text=" + encodeURIComponent(msg);
-      window.open(url, "_blank", "noopener");
+  function waUrl(key) {
+    var msg = msgs[key] || msgs.padrao || "";
+    return "https://wa.me/" + (cfg.whatsapp || "") + "?text=" + encodeURIComponent(msg);
+  }
+
+  // Links de WhatsApp: href real (SEO/acessibilidade) + evento de clique
+  document.querySelectorAll(".js-wa").forEach(function (el) {
+    el.href = waUrl(el.getAttribute("data-wa-msg") || "padrao");
+    el.target = "_blank";
+    el.rel = "noopener";
+    el.addEventListener("click", function () {
+      var event = el.getAttribute("data-event");
+      if (event && window.dataLayer) {
+        window.dataLayer.push({ event: event });
+      }
     });
-  });
-
-  // Contatos exibidos
-  document.querySelectorAll(".js-phone-display").forEach(function (el) {
-    el.textContent = cfg.phoneDisplay || "";
-    el.href = "tel:+" + (cfg.whatsapp || "");
-  });
-  document.querySelectorAll(".js-email-display").forEach(function (el) {
-    el.textContent = cfg.email || "";
-    el.href = "mailto:" + (cfg.email || "");
-  });
-  document.querySelectorAll(".js-hours-display").forEach(function (el) {
-    el.textContent = cfg.hours || "";
-  });
-  document.querySelectorAll(".js-legal-display").forEach(function (el) {
-    el.textContent = cfg.legal || "";
   });
 
   // Ano do rodapé

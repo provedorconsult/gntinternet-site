@@ -1,16 +1,18 @@
 /**
- * Dados de contato da GNT Internet.
- * >>> EDITE APENAS ESTE ARQUIVO para atualizar telefone, e-mail e horários. <<<
+ * Dados oficiais da GNT Internet (fonte: PRD).
+ * >>> EDITE APENAS ESTE ARQUIVO para atualizar WhatsApp e mensagens. <<<
  */
 window.GNT_CONFIG = {
-  // Número do WhatsApp no formato internacional, só dígitos (55 + DDD + número)
-  whatsapp: "5500000000000",
-  // Telefone exibido no site
-  phoneDisplay: "(00) 0000-0000",
-  email: "contato@gntinternet.com.br",
-  hours: "Segunda a sábado, das 8h às 18h",
-  // Texto pré-preenchido ao abrir o WhatsApp
-  whatsappMessage: "Olá! Vim pelo site da GNT Internet e quero saber mais sobre os planos.",
-  // Linha legal do rodapé (CNPJ, endereço). Deixe "" para ocultar.
-  legal: ""
+  // WhatsApp oficial da loja, formato internacional, só dígitos
+  whatsapp: "5561999799700",
+  phoneDisplay: "(61) 99979-9700",
+  address: "St. Leste - Brasília, DF",
+  // Mensagens pré-preenchidas por tipo de CTA (definidas no PRD)
+  messages: {
+    padrao: "Olá, quero saber mais sobre os planos da GNT Internet.",
+    cobertura: "Olá, quero consultar se a GNT Internet atende meu endereço.",
+    residencial: "Olá, quero contratar um plano residencial da GNT Internet.",
+    empresarial: "Olá, quero informações sobre os planos empresariais da GNT Internet com IP público.",
+    dedicado: "Olá, quero solicitar um orçamento de link dedicado da GNT Internet."
+  }
 };
