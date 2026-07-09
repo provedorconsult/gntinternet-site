@@ -1,18 +1,21 @@
-/* ===== GNT Internet — identidade: verde, vermelho e branco (PRD 15.2) ===== */
+/* ===== GNT Internet — identidade visual extraída da logomarca oficial =====
+   Verde escuro #15361c · Vermelho #ee2123 · Marrom-café #261410 · Branco */
 :root {
-  --green: #0a8f3c;        /* botões principais */
-  --green-hover: #087a33;
-  --green-dark: #0b3d22;   /* seção link dedicado */
-  --red: #d92b2b;          /* destaques comerciais */
-  --ink: #17251c;
-  --ink-soft: #4d5e53;
+  --green: #15361c;        /* verde da marca — botões principais */
+  --green-hover: #1e4a28;
+  --green-mid: #2e6b3c;    /* apoio (hero, detalhes) */
+  --green-dark: #0d2312;   /* seção link dedicado */
+  --red: #ee2123;          /* vermelho da marca — destaques comerciais */
+  --red-hover: #c81b1d;
+  --ink: #261410;          /* marrom-café das letras GNT — textos */
+  --ink-soft: #5c4f49;
   --bg: #ffffff;           /* fundos principais */
-  --bg-soft: #f2f6f3;      /* seções alternadas (cinza claro) */
-  --line: #dde6df;
+  --bg-soft: #f4f4f2;      /* seções alternadas (cinza claro) */
+  --line: #e3e1dd;
   --whats: #25d366;
   --whats-dark: #1eb857;
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(23, 37, 28, .10);
+  --shadow: 0 10px 30px rgba(38, 20, 16, .10);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,7 +48,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
   cursor: pointer; border: 2px solid transparent; text-align: center;
 }
 .btn:hover { transform: translateY(-2px); }
-.btn-primary { background: var(--green); color: #fff; box-shadow: 0 6px 18px rgba(10, 143, 60, .35); }
+.btn-primary { background: var(--green); color: #fff; box-shadow: 0 6px 18px rgba(21, 54, 28, .35); }
 .btn-primary:hover { background: var(--green-hover); }
 .btn-ghost { border-color: rgba(255, 255, 255, .55); color: #fff; }
 .btn-ghost:hover { background: rgba(255, 255, 255, .12); }
@@ -62,9 +65,9 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
   border-bottom: 1px solid var(--line);
 }
 .header-inner { display: flex; align-items: center; gap: 1.4rem; padding: .8rem 0; }
-.logo { display: flex; align-items: center; gap: .55rem; font-size: 1.2rem; color: var(--green); }
+.logo { display: flex; align-items: center; gap: .6rem; font-size: 1.2rem; color: var(--green); font-weight: 600; }
 .logo strong { color: var(--ink); }
-.logo-mark { width: 30px; height: 30px; }
+.logo-mark { width: 42px; height: 42px; border-radius: 50%; box-shadow: 0 1px 4px rgba(38, 20, 16, .18); }
 .nav { display: flex; gap: 1.3rem; margin-left: auto; font-weight: 500; color: var(--ink-soft); }
 .nav a:hover { color: var(--green); }
 .header .btn-whats { padding: .55rem 1.1rem; }
@@ -73,7 +76,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
 
 /* ===== Hero ===== */
 .hero {
-  background: linear-gradient(135deg, #06301a 0%, #0a5c2c 55%, var(--green) 100%);
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 55%, var(--green-mid) 100%);
   color: #fff; overflow: hidden;
 }
 .hero-inner {
@@ -140,8 +143,8 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
 .plan-desc { color: var(--ink-soft); font-size: .96rem; flex: 1; }
 .plan-featured { border: 2px solid var(--red); box-shadow: var(--shadow); }
 .plan-featured .plan-price { color: var(--red); }
-.plan-featured .btn-primary { background: var(--red); box-shadow: 0 6px 18px rgba(217, 43, 43, .35); }
-.plan-featured .btn-primary:hover { background: #b82222; }
+.plan-featured .btn-primary { background: var(--red); box-shadow: 0 6px 18px rgba(238, 33, 35, .35); }
+.plan-featured .btn-primary:hover { background: var(--red-hover); }
 .plan-tag {
   position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
   background: var(--red); color: #fff; font-size: .78rem; font-weight: 700;
@@ -154,7 +157,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
   display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-bottom: .5rem;
 }
 .biz-benefits li {
-  background: #eaf6ee; color: var(--green); border: 1px solid #bfe3cc;
+  background: #ecf2ed; color: var(--green); border: 1px solid #c8d8cc;
   padding: .4rem 1.1rem; border-radius: 999px; font-size: .92rem; font-weight: 600;
 }
 .biz-benefits li::before { content: "✓ "; }
@@ -186,7 +189,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
 .choose-table th, .choose-table td { padding: .8rem 1.2rem; text-align: left; }
 .choose-table thead { background: var(--green); color: #fff; }
 .choose-table tbody tr:nth-child(even) { background: var(--bg-soft); }
-.choose-table tbody tr:hover { background: #eaf6ee; }
+.choose-table tbody tr:hover { background: #ecf2ed; }
 
 /* ===== Diferenciais ===== */
 .features { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.2rem; margin-top: 2.2rem; }
@@ -213,7 +216,7 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
 .faq-item p { margin-top: .7rem; color: var(--ink-soft); font-size: .95rem; }
 
 /* ===== CTA final (verde — PRD 15.2) ===== */
-.section-cta { background: linear-gradient(135deg, #06301a, var(--green-hover)); color: #fff; }
+.section-cta { background: linear-gradient(135deg, var(--green-dark), var(--green-hover)); color: #fff; }
 .section-cta h2 { text-align: left; }
 .contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap; }
 .contact-inner > div > p { color: rgba(255, 255, 255, .85); margin: .4rem 0 1.4rem; }
@@ -222,8 +225,9 @@ h2 { font-size: clamp(1.5rem, 3vw, 2.1rem); margin-bottom: .5rem; text-align: ce
 .contact-list a:hover { text-decoration: underline; }
 
 /* ===== Rodapé ===== */
-.footer { background: #071f11; color: rgba(255, 255, 255, .72); font-size: .92rem; }
+.footer { background: #0d1a10; color: rgba(255, 255, 255, .72); font-size: .92rem; }
 .footer a:hover { text-decoration: underline; }
+.footer-logo { width: 72px; height: 72px; border-radius: 50%; margin-bottom: .8rem; }
 .footer-grid {
   display: grid; grid-template-columns: 1.2fr 1fr 1.4fr; gap: 2rem; padding: 2.5rem 0 1.5rem;
 }

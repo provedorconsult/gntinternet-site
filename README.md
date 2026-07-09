@@ -10,6 +10,7 @@ Landing page do provedor GNT Internet (gntinternet.com.br), construída conforme
 - **Planos residenciais**: 100 Megas R$ 100 · 200 Megas R$ 120 · 400 Megas R$ 140 (destaque)
 - **Planos empresariais**: 200 Mb R$ 500 · 400 Mb R$ 800 · 600 Mb R$ 1.200 (1 IP público, suporte até 12h, dupla abordagem sob demanda)
 - **Link dedicado**: a partir de R$ 2,00/Mb (monitoramento 24h, reparo até 4h)
+- **Identidade visual**: cores extraídas da logomarca oficial (`brand/logo-gnt-original.jpeg`) — verde `#15361c`, vermelho `#ee2123`, marrom-café `#261410`, branco. Detalhes em `brand/PRD - Adendo 01 - Logomarca e Identidade Visual.md`
 
 ## Estrutura
 
